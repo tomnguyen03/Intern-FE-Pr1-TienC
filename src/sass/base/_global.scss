@@ -1,0 +1,14 @@
+body {
+  font-size: 10px;
+  font-family: $roboto;
+  line-height: 1;
+}
+
+p {
+  font-family: $arial;
+}
+
+.container {
+  max-width: $site-width;
+  margin: 0 auto;
+}
