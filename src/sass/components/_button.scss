@@ -1,0 +1,27 @@
+.btn {
+  text-transform: uppercase;
+  color: white;
+  border: none;
+
+  &__primary {
+    background-color: $yellow;
+  }
+
+  &__secondary {
+    background-color: $black;
+  }
+
+  &__outline {
+    border: 1px solid $gray;
+    background-color: transparent;
+    transition: $transition;
+    color: $gray;
+
+    &:hover {
+      border: none;
+      background-color: $yellow;
+      color: $white;
+      text-transform: none;
+    }
+  }
+}
