@@ -1,0 +1,51 @@
+footer.footer
+  .container
+    nav.footer-top
+      ul.footer-top__list
+        li.col-3.col-sm-6.col-xs-12.footer-top__item
+          h2.footer-top__title Về chúng tôi
+          p.desc Công ty Cổ phần Công nghệ DKT đã và đang khẳng định được vị trí hàng đầu trong lĩnh vực Thương mại điện tử
+          p.detail
+            i.bx.bx-location-plus
+              span Tầng 4 - Tòa nhà Hanoi Group 442 Đội Cấn Ba Đình - Hà Nội
+          p.detail
+            i.bx.bx-envelope
+              span support@dkt.vn
+          p.detail
+            i.bx.bxs-phone
+              span (84-4) 66558868  -  (84-4) 37868904
+        each item in footerData
+          li.footer-top__item
+            h2.footer-top__title= item.title
+            each i in item.list 
+              a(href="#")= i
+        li.footer-top__item
+          h2.footer-top__title Kết nối 
+          each item in socials 
+            a(href=item.href)
+              i(class=item.icon)
+                span=item.name  
+    section.footer-payment-support 
+      .row 
+        .col-5.col-sm-12
+          p Thanh toán
+          .row
+            each item in banks
+              .col-3.col-xs-6.payment
+                img(src=item, alt="bank")
+        .col-1
+        .col-6.col-sm-12
+          p Giải đáp nhanh
+          .row.justify-content-between
+            .col-6.col-xs-12.support
+              .support-icon
+                i.bx.bxs-phone-call
+              .support-info
+                p Tư vấn miễn phí (24/7)
+                p.contact 1900 650 650
+            .col-6.col-xs-12.support
+              .support-icon
+                i.bx.bxs-message-rounded
+              .support-info
+                p Góp ý - Phản hồi - Thắc mắc
+                p.contact 1900 650 650

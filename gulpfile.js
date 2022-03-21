@@ -34,7 +34,7 @@ function assetsTask() {
 function serve() {
   browserSync.init({ server: { baseDir: "./dist" } });
   watch(scssFiles, scssTask);
-  watch(htmlFiles, htmlTask);
+  watch("src/pug/**/*.pug", htmlTask);
   watch(assetsFile, assetsTask);
 }
 

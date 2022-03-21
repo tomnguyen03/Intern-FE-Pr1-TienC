@@ -13,8 +13,7 @@
 
       li {
         @include flex(center, center);
-        width: 50px;
-        height: 50px;
+        @include box(50px, 50px, 0);
         transition: $transition;
         cursor: pointer;
         border-left: 1px solid $line-gray;
@@ -47,8 +46,7 @@
 
       a {
         @include flex(row, center, center);
-        width: 90px;
-        height: 50px;
+        @include box(90px, 50px, 0);
         font-size: 13px;
         color: $black;
         text-transform: uppercase;
@@ -160,8 +158,7 @@
       display: flex;
 
       li {
-        width: 138px;
-        height: 70px;
+        @include box(138px, 70px, 0);
         @include flex(row, center, center);
         cursor: pointer;
         transition: $transition;
@@ -186,7 +183,7 @@
         display: none;
         flex-direction: column;
         position: absolute;
-        z-index: $z-index;
+        z-index: $z-elevate;
         background-color: $black;
         width: 100%;
         left: 0;
@@ -209,13 +206,12 @@
 
       &__card-count {
         @include flex(row, center, center);
-        width: 20px;
-        height: 20px;
+        @include box(20px, 20px, 0);
         border-radius: 50%;
         color: $white;
         background-color: $yellow;
         position: absolute;
-        z-index: $z-index;
+        z-index: $z-elevate;
         top: -5px;
         right: -5px;
         font-size: 15px;
