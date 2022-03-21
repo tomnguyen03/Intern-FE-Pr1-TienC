@@ -1,0 +1,9 @@
+mixin cards(cards)
+  .card-list
+    each item in cards 
+      .card-item 
+        .icon 
+          i(class=item.icon)
+        .content 
+          h4.title= item.title
+          p.desc= item.detail

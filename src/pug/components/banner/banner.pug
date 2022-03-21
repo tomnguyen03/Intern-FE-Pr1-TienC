@@ -1,0 +1,15 @@
+mixin banner(banner)
+  #carouselExampleControls.carousel.slide(data-ride='carousel')
+    .carousel-inner
+      each item,index in banner
+        div(class=`carousel-item ${index === 0 ? "active" : ""}`)
+          .content-slider
+            h2.name= item.name
+            h3.title= item.title
+            ul 
+              each feature in item.detail
+                li.mb-1.mb-sm-2
+                  i.bx.bx-check
+                  span.ml-1.ml-sm-3= feature
+            button.btn.btn__primary.mt-1.mt-sm-3.rounded-0 Đặt hàng
+          img.d-block.w-100(src=item.image alt='Slide')
