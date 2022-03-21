@@ -1,0 +1,225 @@
+.header {
+  .container {
+    @include flex(row, center, space-between);
+  }
+
+  &__top {
+    width: 100%;
+    height: 50px;
+    background-color: $bg-gray;
+
+    &-left ul {
+      display: flex;
+
+      li {
+        @include flex(center, center);
+        width: 50px;
+        height: 50px;
+        transition: $transition;
+        cursor: pointer;
+        border-left: 1px solid $line-gray;
+
+        &:last-child {
+          border-right: 1px solid $line-gray;
+        }
+
+        a {
+          color: $black;
+          font-size: 25px;
+          transition: $transition;
+        }
+
+        &:hover {
+          background-color: $yellow;
+          a {
+            color: $white;
+          }
+        }
+      }
+
+      @include respond-to(phone-and-down) {
+        display: none;
+      }
+    }
+
+    &-right {
+      display: flex;
+
+      a {
+        @include flex(row, center, center);
+        width: 90px;
+        height: 50px;
+        font-size: 13px;
+        color: $black;
+        text-transform: uppercase;
+        font-weight: 500;
+        transition: $transition;
+        border-left: 1px solid $line-gray;
+        border-right: 1px solid $line-gray;
+
+        &:first-child {
+          border-right: 0;
+        }
+
+        &:hover {
+          background-color: $yellow;
+          color: $white;
+        }
+      }
+
+      @include respond-to(phone-and-down) {
+        width: 100%;
+        padding: 0;
+
+        a {
+          width: 50%;
+
+          &:first-child {
+            border-left: 0;
+          }
+
+          &:last-child {
+            border-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__brand {
+    width: 100%;
+
+    & > .container {
+      height: 120px;
+    }
+
+    &-logo {
+      height: 90px;
+      max-width: 135px;
+    }
+
+    &-contact {
+      span {
+        color: $yellow;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        display: inline-block;
+      }
+      p {
+        color: $gray;
+        font-size: 15px;
+      }
+      @include respond-to(desktop-and-down) {
+        display: none;
+      }
+    }
+
+    input {
+      font-size: 15px;
+      border: 1px solid $line-gray;
+      padding: 15px 30px;
+      border-radius: 30px;
+      color: $gray;
+    }
+
+    @include respond-to(phone-and-down) {
+      .container {
+        flex-direction: column;
+        height: 180px;
+        padding: 10px 0;
+      }
+      input {
+        width: 90%;
+      }
+    }
+  }
+
+  &__menu {
+    background-color: $black;
+
+    .container {
+      height: 70px;
+      width: 100%;
+      position: relative;
+    }
+
+    &-toggle {
+      display: none;
+      i {
+        color: white;
+        font-size: 35px;
+      }
+      @include respond-to(desktop-and-down) {
+        display: block;
+      }
+    }
+
+    &-left ul {
+      display: flex;
+
+      li {
+        width: 138px;
+        height: 70px;
+        @include flex(row, center, center);
+        cursor: pointer;
+        transition: $transition;
+
+        a {
+          color: white;
+          font-size: 15px;
+          text-transform: uppercase;
+          transition: $transition;
+          font-weight: 600;
+        }
+
+        &:hover {
+          background-color: $yellow;
+        }
+      }
+      .active {
+        background-color: $yellow;
+      }
+
+      @include respond-to(desktop-and-down) {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        z-index: $z-index;
+        background-color: $black;
+        width: 100%;
+        left: 0;
+        top: 70px;
+        li {
+          width: 100%;
+          a {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    &-right {
+      position: relative;
+      i {
+        font-size: 35px;
+        color: white;
+      }
+
+      &__card-count {
+        @include flex(row, center, center);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        color: $white;
+        background-color: $yellow;
+        position: absolute;
+        z-index: $z-index;
+        top: -5px;
+        right: -5px;
+        font-size: 15px;
+      }
+    }
+  }
+}
