@@ -1,3 +1,8 @@
+@mixin width($width) {
+  max-width: $width;
+  width: 100%;
+}
+
 @mixin flex($flex-direction: row, $align-items: center, $justify-content: center) {
   display: flex;
   flex-direction: $flex-direction;

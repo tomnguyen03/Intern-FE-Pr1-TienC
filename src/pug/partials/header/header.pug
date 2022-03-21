@@ -1,0 +1,44 @@
+header.header
+      .header__top 
+        .container
+          .header__top-left
+            ul
+              li 
+                a(href="#")
+                  i.bx.bxl-facebook
+              li 
+                a(href="#")
+                  i.bx.bxl-google-plus
+              li 
+                a(href="#")
+                  i.bx.bxl-instagram 
+              li 
+                a(href="#")
+                  i.bx.bxl-twitter 
+          .header__top-right 
+            a(href="#") Đăng ký
+            a(href="#") Đăng nhập 
+      .header__brand
+        .container 
+          img.header__brand-logo(src="./assets/images/Logo.png", alt="")
+          .header__brand-contact
+            span hotline 
+            p (04) 9500 9650 - (04) 9500 8850
+          .header__brand-contact
+            span đặt hàng nhanh 
+            p (04) 9500 9650 - (04) 9500 8850
+          form
+            input(type="text" placeholder="Tìm kiếm....")
+      .header__menu
+        .container
+          .header__menu-toggle
+            i.bx.bx-menu
+          .header__menu-left
+            ul
+              each item in menuItem 
+                li(class=`${current==item.href ? "active" : ""}`)
+                  a(href=item.href)=item.name 
+          .header__menu-right
+            a(href="#")
+              i.bx.bx-cart-alt
+              .header__menu-right__card-count 0
