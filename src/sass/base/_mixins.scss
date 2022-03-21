@@ -3,9 +3,16 @@
   width: 100%;
 }
 
-@mixin flex($flex-direction: row, $align-items: center, $justify-content: center) {
+@mixin flex($flex-direction: row, $align-items: center, $justify-content: center, $wrap: wrap) {
   display: flex;
   flex-direction: $flex-direction;
   align-items: $align-items;
   justify-content: $justify-content;
+  flex-wrap: $wrap;
+}
+
+@mixin box($width, $height, $radius: 0) {
+  width: $width;
+  height: $height;
+  border-radius: $radius;
 }
