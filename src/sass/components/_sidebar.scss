@@ -1,0 +1,33 @@
+.sidebar {
+  ul {
+    li {
+      a {
+        height: 60px;
+        padding: 20px;
+        display: block;
+        background-color: white;
+        border: 1px solid $line-gray;
+        border-bottom: 0;
+        font-size: 13px;
+        color: $p-gray;
+        font-weight: 600;
+        transition: $transition;
+
+        &:hover {
+          background-color: $black;
+          color: $yellow;
+        }
+      }
+
+      &:last-child {
+        a {
+          border-bottom: 1px solid $line-gray;
+        }
+      }
+    }
+  }
+
+  @include respond-to(desktop-and-down) {
+    display: none;
+  }
+}
