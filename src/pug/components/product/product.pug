@@ -1,0 +1,27 @@
+mixin rating(product)
+  .product-rate 
+    span
+      -const stars = [...Array(5)].map((_, index) => index < product.rate ? 'bx bxs-star' : 'bx bx-star')
+      each star in stars
+        i(class=star)
+    span.reviews (#{product.reviews} Đánh giá)
+
+mixin product(product)
+  .product-item.w-100
+    .product-body.d-flex.flex-column.align-items-center.justify-content-center
+      .product-img 
+        img(src=product.image, alt=product.title)
+      p.product-price= product.price
+        | đ
+      h3.product-title= product.title 
+      +rating(product)
+      .product-button
+        a(href="#").btn.btn__primary mua ngay
+        a(href="#").btn.btn__secondary xem chi tiết
+
+mixin products (products, size)
+    ul.product-list.d-flex.flex-wrap.justify-content-between.w-100
+        - for(var i = 0; i < size; i++) 
+            .col-lg-4.col-sm-6.pr-0.product-col
+                li.product-list__item.mb-4
+                    +product(products[i])
