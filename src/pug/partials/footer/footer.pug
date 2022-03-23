@@ -2,7 +2,7 @@ footer.footer
   .container
     nav.footer-top
       ul.footer-top__list
-        li.col-3.col-sm-6.col-xs-12.footer-top__item
+        li.col-xs-12.col-sm-6.col-lg-3.footer-top__item
           h2.footer-top__title Về chúng tôi
           p.desc Công ty Cổ phần Công nghệ DKT đã và đang khẳng định được vị trí hàng đầu trong lĩnh vực Thương mại điện tử
           p.detail
@@ -27,23 +27,22 @@ footer.footer
                 span=item.name  
     section.footer-payment-support 
       .row 
-        .col-5.col-sm-12
+        .col-sm-12.col-lg-5
           p Thanh toán
           .row
             each item in banks
-              .col-3.col-xs-6.payment
+              .col-xs-6.col-sm-3.payment
                 img(src=item, alt="bank")
-        .col-1
-        .col-6.col-sm-12
+        .offset-lg-1.col-sm-12.col-lg-6
           p Giải đáp nhanh
           .row.justify-content-between
-            .col-6.col-xs-12.support
+            .col-xs-12.col-sm-6.support
               .support-icon
                 i.bx.bxs-phone-call
               .support-info
                 p Tư vấn miễn phí (24/7)
                 p.contact 1900 650 650
-            .col-6.col-xs-12.support
+            .col-xs-12.col-sm-6.support
               .support-icon
                 i.bx.bxs-message-rounded
               .support-info

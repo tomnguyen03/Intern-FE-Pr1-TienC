@@ -1,0 +1,51 @@
+.card-list {
+  display: flex;
+  flex-direction: column;
+
+  .card-item {
+    @include flex(column, flex-start, center, wrap);
+    height: 125px;
+    background-color: $white;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: $transition;
+    width: 100%;
+
+    .content {
+      width: 80%;
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 13px;
+      color: $p-gray;
+      line-height: 1.5;
+      word-wrap: break-word;
+    }
+
+    &:hover {
+      background-color: $yellow;
+
+      .icon,
+      h4,
+      p {
+        color: white;
+      }
+    }
+
+    @include respond-to(tablet-and-down) {
+      padding: 0;
+    }
+  }
+
+  .icon {
+    font-size: 40px;
+    color: $yellow;
+    padding: 15px;
+  }
+}

@@ -4,3 +4,11 @@ block variables
 prepend title
   - var title = "Trang chủ"
 block main
+  main 
+    .container 
+      section.banner.pt-4
+        .row 
+          .col-lg-8.p-0
+            +banner(banner)
+          .col-lg-4.p-0
+            +cards(cards)

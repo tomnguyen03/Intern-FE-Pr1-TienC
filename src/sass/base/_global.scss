@@ -10,10 +10,7 @@ p {
 
 .container {
   width: 100%;
-  max-width: $site-width;
+  max-width: $site-width !important;
   margin: 0 auto;
   padding: 0 20px;
-}
-.justify-content-between {
-  justify-content: space-between;
 }
