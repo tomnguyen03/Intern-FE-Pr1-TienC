@@ -8,7 +8,14 @@ block main
     .container 
       section.banner.pt-4
         .row 
-          .col-lg-8.p-0
+          .col-lg-8.pr-0
             +banner(banner)
-          .col-lg-4.p-0
+          .col-lg-4.pl-0
             +cards(cards)
+      section.popular-product.pt-5
+        .row
+          .col-lg-12.mb-5
+            +title-section("Sản phẩm nổi bật")
+        .row 
+          .col-lg-3.col-12
+            +sidebar(categories)
