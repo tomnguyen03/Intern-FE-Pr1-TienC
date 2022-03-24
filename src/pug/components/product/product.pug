@@ -8,7 +8,7 @@ mixin rating(product)
 
 mixin product(product)
   .product-item.w-100
-    .product-body.d-flex.flex-column.align-items-center.justify-content-center
+    .product-body
       .product-img 
         img(src=product.image, alt=product.title)
       p.product-price= product.price

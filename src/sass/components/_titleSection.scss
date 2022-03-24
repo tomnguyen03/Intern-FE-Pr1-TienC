@@ -9,7 +9,7 @@
     @include flex(row, center, center);
     gap: 5px;
 
-    a {
+    & > a {
       @include flex(row, center, center);
       width: 30px;
       height: 30px;
@@ -20,6 +20,23 @@
         background-color: white;
         border: 1px solid $gray;
         color: $gray;
+      }
+    }
+
+    .categories-title {
+      display: flex;
+      gap: 10px;
+
+      a {
+        padding: 5px 15px;
+        text-transform: none;
+        font-size: 13px;
+        border-radius: 0;
+        font-weight: 500;
+      }
+
+      @include respond-to(tablet-and-down) {
+        display: none;
       }
     }
   }
