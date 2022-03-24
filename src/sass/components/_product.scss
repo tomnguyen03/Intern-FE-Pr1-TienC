@@ -1,3 +1,8 @@
+.product-body {
+  @include flex(row, center, center, nowrap);
+  flex-direction: column;
+}
+
 .product-col {
   @include respond-to(phone-and-down) {
     display: none;
