@@ -28,3 +28,44 @@ block main
         .row 
           .col-lg-12
             +products(products,3)
+      section.banner-section
+        .row
+          .col-lg-6.col-12.w-100
+            img(class="w-100" src="./assets/images/banner/banner1.png", alt="banner 1")
+          .col-lg-6.col-12.w-100
+            img(class="w-100" src="./assets/images/banner/banner2.png", alt="banner 2")
+      section.best-selller-product.pt-5 
+        .row 
+          .col-lg-12.mb-5 
+            +title-section("Sản phẩm bán chạy",categoriesTitle)
+        .row 
+          .col-lg-12
+            +large-product(products)
+      section.banner-section
+        .row 
+          .col-12
+            img(class="min-height-100" src="./assets/images/banner/banner3.png", alt="banner 3")
+            .banner-content 
+              h2 rocket woraku
+              p Máy cắt, khoan đa năng tích hợp điều khiển từ xa loại nhỏ thích hợp với các hộ gia đình
+              .product-button
+                a(href="#").btn.btn__primary mua ngay
+                a(href="#").btn.btn__outline chi tiết
+      section.new-product.pt-5
+        .row 
+          .col-lg-12.mb-5 
+            +title-section("Hàng mới về")
+        .row 
+          .col-lg-12
+            +bigProducts(products,4)
+    section.brand.bg-gray
+      .container.py-4.d-flex.align-items-center.justify-content-between
+        each item in brands
+          img(src=item, alt="Brand name")
+    section.contact
+      img(src="./assets/images/background-contact.png", alt="background contact")
+      .contact-content.px-4
+        p Đăng kí để nhận tin tức khuyến mãi hàng tuần
+        form(action="")
+          input(type="text" placeholder="Nhập Email của bạn...")
+          a.btn.btn__primary Đăng kí 

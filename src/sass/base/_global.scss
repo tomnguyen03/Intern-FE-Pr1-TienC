@@ -14,3 +14,15 @@ p {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.bg-gray {
+  background-color: $bg-gray;
+}
+
+.gap-4 {
+  gap: 1.5rem;
+}
+
+.min-height-100 {
+  min-height: 100px;
+}
