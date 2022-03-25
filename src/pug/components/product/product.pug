@@ -19,9 +19,49 @@ mixin product(product)
         a(href="#").btn.btn__primary mua ngay
         a(href="#").btn.btn__secondary xem chi tiết
 
+mixin bigProduct(product)
+  .product-item.w-100.height-big
+    .product-body.big-product
+      .col-sm-4.col-xs-12.product-img.d-flex.align-items-center.justify-content-center
+        img(src=product.image, alt=product.title)
+      .col-sm-8.col-xs-12.product-content.d-flex.align-items-center.justify-content-center.flex-column
+        h3.product-title= product.title 
+        +rating(product)
+        p.product-desc= product.desc
+        p.product-price= product.price
+          | đ
+        .product-button
+          a(href="#").btn.btn__primary mua ngay
+          a(href="#").btn.btn__secondary xem chi tiết
+
+mixin large-product(products)
+  .product-list.large-product
+    .col-lg-3.pr-0.product-col
+      -for(var i = 0; i < 2; i++)
+        .col-lg-12 
+          .product-list__item.mb-4
+            +product(products[i])
+    .col-lg-6.pr-0.product-col
+      -for(var i = 2; i < 3; i++) 
+        .col-lg-12
+          .product-list__item.mb-4
+            +product(products[i])
+    .col-lg-3.pr-0.product-col
+      -for(var i = 3; i < 5; i++) 
+        .col-lg-12
+          .product-list__item.mb-4
+            +product(products[i])
+
 mixin products (products, size)
-    ul.product-list.d-flex.flex-wrap.justify-content-between.w-100
-        - for(var i = 0; i < size; i++) 
-            .col-lg-4.col-sm-6.pr-0.product-col
-                li.product-list__item.mb-4
-                    +product(products[i])
+  .product-list
+    - for(var i = 0; i < size; i++) 
+      .col-lg-4.col-sm-6.pr-0.product-col
+        .product-list__item.mb-4
+          +product(products[i])
+
+mixin bigProducts (products, size)
+  .product-list
+    - for(var i = 0; i < size; i++) 
+      .col-lg-6.col-sm-12.pr-0.product-col
+        .product-list__item.mb-4
+          +bigProduct(products[i])

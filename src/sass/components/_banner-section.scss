@@ -1,0 +1,61 @@
+.banner-section {
+  position: relative;
+
+  @include respond-to(desktop-and-down) {
+    .row {
+      gap: 30px;
+    }
+  }
+
+  .banner-content {
+    @include flex(column, center, center);
+    max-width: 450px;
+    position: absolute;
+    z-index: $z-elevate;
+    top: 0;
+    right: 10%;
+    height: 100%;
+
+    h2 {
+      font-size: 36px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .product-button {
+      a {
+        margin-right: 10px;
+        border-radius: 0;
+        font-weight: 600;
+        font-size: 13px;
+        padding: 10px 20px;
+      }
+
+      .btn__primary {
+        &:hover {
+          color: white;
+        }
+      }
+
+      .btn__outline {
+        color: black;
+        border-color: black;
+
+        &:hover {
+          background-color: transparent;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    @include respond-to(desktop-and-down) {
+      display: none;
+    }
+  }
+}

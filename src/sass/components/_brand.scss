@@ -1,0 +1,15 @@
+.brand {
+  @include respond-to(tablet-and-down) {
+    .container {
+      justify-content: center !important;
+    }
+
+    img {
+      display: none;
+
+      &:first-child {
+        display: flex;
+      }
+    }
+  }
+}
