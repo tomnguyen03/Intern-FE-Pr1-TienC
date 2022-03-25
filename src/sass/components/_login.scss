@@ -1,0 +1,52 @@
+.login-page,
+.signup-page {
+  h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    border-radius: 0;
+    font-size: 14px;
+    padding: 15px 25px;
+    font-weight: 600;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.login-left {
+  form {
+    @include flex(column, flex-start, flex-start);
+    gap: 20px;
+  }
+
+  .login-link {
+    @include flex(row, center, space-between);
+    width: 100%;
+
+    a {
+      font-style: italic;
+      color: $yellow;
+      text-decoration: underline;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}
+
+.login-right {
+  @include flex(column, flex-start, flex-start);
+  gap: 20px;
+
+  p {
+    font-size: 14px;
+    color: $gray;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}

@@ -19,10 +19,18 @@ p {
   background-color: $bg-gray;
 }
 
+.color-gray {
+  color: $gray;
+}
+
 .gap-4 {
   gap: 1.5rem;
 }
 
 .min-height-100 {
   min-height: 100px;
+}
+
+.border-gray {
+  border: 1px solid $line-gray;
 }
