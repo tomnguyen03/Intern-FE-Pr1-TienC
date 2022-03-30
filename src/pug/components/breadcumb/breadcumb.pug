@@ -1,0 +1,8 @@
+mixin breadcumb(data,last)
+  nav.breadcumb-wrapper
+    ul.breadcumb
+      each item in data 
+        li.breadcumb-item
+          a(href="#")=item
+      if last 
+        li.breadcumb-item.active= last

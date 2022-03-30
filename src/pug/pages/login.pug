@@ -1,0 +1,24 @@
+extend ../base/base.pug
+block variables
+  - const current="/"
+prepend title
+  - var title = "Đăng nhập"
+block main
+  main 
+    .container.py-5.login-page
+      +breadcumb(["Trang chủ"], "Đăng nhập")
+      .row
+        .col-sm-12.col-lg-6.login-left.mt-5
+          h2  Thông tin đăng nhập
+          form(action="") 
+            -for(var i = 0; i < 2; i++)
+              -const {title,name,type,placeholder,required} = profile[i];
+              +input(title,name,type,placeholder,required)
+            .login-link
+              +checkbox("Ghi nhớ đăng nhập")
+              a(href="#") Bạn quên mật khẩu
+            a.btn.btn__secondary(href="#") Đăng nhập
+        .col-sm-12.col-lg-6.login-right.mt-5
+          h2 Bạn chưa có tài khoản?
+          p Đăng ký tài khoản để mua hàng nhanh hơn. Theo dõi đơn đặt hàng, vận chuyển. Cập nhật các tin tức sự kiện và các chương trình giảm giá của chúng tôi.
+          a.btn.btn__primary(href="/signup.html") Đăng kí

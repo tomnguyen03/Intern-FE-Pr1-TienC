@@ -1,0 +1,20 @@
+.breadcumb {
+  display: flex;
+
+  li + li:before {
+    padding: 8px;
+    color: $gray;
+    content: "/\00a0";
+  }
+
+  &-item,
+  a {
+    font-size: 14px;
+    color: $gray;
+    font-weight: 500;
+  }
+
+  .active {
+    color: $black;
+  }
+}

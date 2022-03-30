@@ -1,0 +1,14 @@
+mixin input(data,name,type="text",placeholder="",isRequired=false)
+  .input-group 
+    -if (isRequired)
+      label.require= data
+        |:
+    -else
+      label= data
+        |:
+    input(type=type, placeholder=placeholder name=name)
+
+mixin checkbox(data)
+  .checkbox 
+    input(type="checkbox")
+    span= data

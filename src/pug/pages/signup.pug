@@ -1,0 +1,27 @@
+extend ../base/base.pug
+block variables
+  - const current="/"
+prepend title
+  - var title = "Đăng kí"
+block main
+  main 
+    .container.py-5.signup-page
+      +breadcumb(["Trang chủ"], "Đăng kí")
+      h2.mt-5  Thông tin cá nhân
+      form(action="") 
+        .row
+          each item in profile
+            -const {title,name,type,placeholder,required} = item;
+            .col-lg-6.mt-4
+              +input(title,name,type,placeholder,required)
+          .col-lg-6.mt-4
+            +checkbox("Đăng kí nhận tin tức qua Email")
+          .col-12.mt-5
+            h2 Thông tin đăng nhập
+          -for(var i = 0; i < 2; i++)
+            -const {title,name,type,placeholder,required} = profile[i];
+            .col-lg-6.mt-4
+              +input(title,name,type,placeholder,required)
+          .col-12.mt-4
+            a.btn.btn__secondary.mr-3(href="#") quay lại 
+            a.btn.btn__primary(href="#") đăng kí
