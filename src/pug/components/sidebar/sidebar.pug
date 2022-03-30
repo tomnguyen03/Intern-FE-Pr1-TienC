@@ -1,6 +1,25 @@
-mixin sidebar(categories)
+mixin sidebar(categories,title)
   nav.sidebar 
     ul 
+      -if (title)
+        li.title
+          a(href="#")= title
       each item in categories 
         li 
           a(href="#")= item
+
+mixin productSidebar(products,title)
+  nav.sidebar
+    ul
+      -if (title)
+        li.title
+          a(href="#")= title
+      -for(var i = 0; i < 5; i++)
+        -const {image,title,price} = products[i]
+        li.sidebar-item
+          .row
+            .col-4
+              img(src=image, alt="")
+            .col-8
+              h3=title
+              span=price

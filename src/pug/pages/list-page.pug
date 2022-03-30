@@ -1,0 +1,19 @@
+extend ../base/base.pug
+block variables
+  - const current="/"
+prepend title
+  - var title = "Danh mục sản phẩm"
+block main
+  main 
+    .container.py-5.login-page
+      +breadcumb(["Trang chủ"], "Danh mục sản phẩm")
+      .row
+        .col-3
+          .col-12.px-0
+            +sidebar(categories,"danh mục sản phẩm")
+          .col-12.px-0
+            +sidebar(categoriesPrice,"tìm theo mức giá")
+          .col-12.px-0
+            +sidebar(categoriesColor,"tìm theo màu sắc")
+          .col-12.px-0 
+            +productSidebar(products,"sản phẩm khuyến mãi")
