@@ -24,6 +24,42 @@
           border-bottom: 1px solid $line-gray;
         }
       }
+
+      h3 {
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 600;
+        color: $red;
+      }
+    }
+
+    .title {
+      a {
+        background-color: $black;
+        color: $yellow;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .sidebar-item {
+    .row {
+      @include flex(row, center, flex-start, wrap);
+      height: 120px;
+      width: 100%;
+      border: 1px solid $line-gray;
+      margin-left: 0;
+      border-bottom: 0;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid $line-gray;
     }
   }
 
