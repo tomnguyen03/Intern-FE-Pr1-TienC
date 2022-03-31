@@ -67,10 +67,10 @@ mixin large-product(products)
           .product-list__item.mb-4
             +product(products[i])
 
-mixin products (products, size)
-  .product-list
-    - for(var i = 0; i < size; i++) 
-      .col-lg-4.col-sm-6.pr-0.product-col
+mixin products (products, size, type)
+  .product-list#grid
+    - for(var i = 0; i < size; i++)
+      div(class=`col-lg-4 col-sm-6 pr-0 ${type=='all' ? "" : "product-col"}`)
         .product-list__item.mb-4
           +product(products[i])
 
@@ -82,7 +82,7 @@ mixin bigProducts (products, size)
           +bigProduct(products[i])
 
 mixin product-list-page(products,size)
-  .product-list
+  .product-list#list
     -for(var i = 0; i < size; i++)
       .col-12.px-0
         .product-list__item.mb-4

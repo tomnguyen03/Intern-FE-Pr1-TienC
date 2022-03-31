@@ -35,6 +35,7 @@
       border: 1px solid $line-gray;
       padding: 5px;
       cursor: pointer;
+      color: $gray;
 
       &:hover {
         color: $yellow;
@@ -42,7 +43,13 @@
     }
 
     .active {
-      color: $yellow !important;
+      i {
+        color: $yellow !important;
+      }
     }
   }
+}
+
+.nav.nav-tabs {
+  border-bottom: none;
 }
