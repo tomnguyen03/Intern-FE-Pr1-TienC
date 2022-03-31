@@ -1,4 +1,4 @@
-mixin filterProduct()
+mixin filterProduct(type)
   .filter-product
     .filter-left
       .filter-sort
@@ -9,9 +9,14 @@ mixin filterProduct()
           option(value="review") Đánh giá
       .filter-show
         label Show:
-        select(name="show") 
+        select(name="show")
           option(value="9") 9
           option(value="18") 18
     .filter-right
-      i.bx.bx-menu.active
-      i.bx.bxs-grid
+      ul.nav.nav-tabs
+        li
+          a(data-toggle='tab' href='#list' class="active show")
+            i.bx.bx-menu
+        li.ml-2
+          a(data-toggle='tab' href='#grid')
+            i.bx.bxs-grid
