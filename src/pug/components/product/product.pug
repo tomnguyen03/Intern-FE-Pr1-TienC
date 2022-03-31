@@ -22,9 +22,24 @@ mixin product(product)
 mixin bigProduct(product)
   .product-item.w-100.height-big
     .product-body.big-product
-      .col-sm-4.col-xs-12.product-img.d-flex.align-items-center.justify-content-center
+      .col-sm-4.col-xs-12.product-img
         img(src=product.image, alt=product.title)
-      .col-sm-8.col-xs-12.product-content.d-flex.align-items-center.justify-content-center.flex-column
+      .col-sm-8.col-xs-12.product-content
+        h3.product-title= product.title 
+        +rating(product)
+        p.product-desc= product.desc
+        p.product-price= product.price
+          | đ
+        .product-button
+          a(href="#").btn.btn__primary mua ngay
+          a(href="#").btn.btn__secondary xem chi tiết
+
+mixin product-item-list-page(product)
+  .product-item.w-100.height-big
+    .product-body.big-product
+      .col-sm-4.col-xs-12.product-img
+        img(src=product.image, alt=product.title)
+      .col-sm-8.col-xs-12.product-content.align-items-start
         h3.product-title= product.title 
         +rating(product)
         p.product-desc= product.desc
@@ -65,3 +80,10 @@ mixin bigProducts (products, size)
       .col-lg-6.col-sm-12.pr-0.product-col
         .product-list__item.mb-4
           +bigProduct(products[i])
+
+mixin product-list-page(products,size)
+  .product-list
+    -for(var i = 0; i < size; i++)
+      .col-12.px-0
+        .product-list__item.mb-4
+          +product-item-list-page(products[i])

@@ -1,0 +1,17 @@
+mixin filterProduct()
+  .filter-product
+    .filter-left
+      .filter-sort
+        label Sắp xếp theo:
+        select(name="sort")
+          option(value="name") Tên sản phẩm
+          option(value="price") Giá sản phẩm
+          option(value="review") Đánh giá
+      .filter-show
+        label Show:
+        select(name="show") 
+          option(value="9") 9
+          option(value="18") 18
+    .filter-right
+      i.bx.bx-menu.active
+      i.bx.bxs-grid

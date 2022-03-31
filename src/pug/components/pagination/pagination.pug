@@ -1,0 +1,9 @@
+mixin pagination(size,current)
+  ul.pagination
+    li
+      button(type="button") Trang trước
+    -for (var i = 1; i < size+1; i++)
+      li
+        button(type="button" class=`${current==i ? "active" : ""}`)=i
+    li 
+      button(type="button") Trang sau

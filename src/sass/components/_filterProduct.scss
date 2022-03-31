@@ -1,0 +1,48 @@
+.filter-product {
+  @include flex(row, center, space-between, wrap);
+  gap: 20px;
+
+  .filter-left {
+    @include flex(row, center, center, wrap);
+    gap: 20px;
+
+    label {
+      font-size: 14px;
+      font-weight: 500;
+      color: $black;
+    }
+
+    select {
+      font-size: 14px;
+      padding: 5px 10px;
+      border: 1px solid $line-gray;
+      font-weight: 500;
+      color: $gray;
+      background-color: $white;
+    }
+
+    @include respond-to(phone-and-down) {
+      justify-content: flex-start;
+    }
+  }
+
+  .filter-right {
+    @include flex(row, center, center);
+    gap: 20px;
+
+    i {
+      font-size: 25px;
+      border: 1px solid $line-gray;
+      padding: 5px;
+      cursor: pointer;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+
+    .active {
+      color: $yellow !important;
+    }
+  }
+}

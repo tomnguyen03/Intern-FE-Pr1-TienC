@@ -1,0 +1,25 @@
+.pagination {
+  @include flex(row, center, flex-end);
+  gap: 10px;
+
+  button {
+    font-size: 14px;
+    color: $gray;
+    border: 1px solid $line-gray;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: $white;
+
+    &:hover {
+      background-color: $yellow;
+      color: $white;
+      border-color: $yellow;
+    }
+  }
+
+  .active {
+    background-color: $yellow;
+    color: $white;
+    border-color: $yellow;
+  }
+}
