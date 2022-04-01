@@ -1,0 +1,80 @@
+#modal-one-open:checked ~ #modal-one {
+  display: flex;
+}
+
+#modal-one-open {
+  width: 1px;
+}
+
+.popup {
+  @include flex(row, center, center);
+  background-color: rgba($black, 0.8);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: $z-elevate;
+  display: none;
+}
+
+.popup-wrapper {
+  @include flex(column, center, center);
+
+  background-image: url("../assets/images/popup.png");
+  width: 800px;
+  height: 450px;
+  position: relative;
+  padding: 0 60px;
+
+  .close-window {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .btn__secondary {
+      border-radius: 0;
+      color: $yellow;
+      font-size: 25px;
+    }
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .input-group {
+    width: 600px;
+    height: 60px;
+  }
+
+  button.btn__primary {
+    width: 600px;
+    padding: 8px 0;
+    font-weight: 600;
+    border-radius: 0;
+  }
+
+  .popup-checkbox {
+    margin-top: 15px;
+    width: 600px;
+
+    .checkbox {
+      margin-right: auto;
+
+      span {
+        color: $black;
+        font-style: normal;
+        font-weight: 500;
+      }
+    }
+  }
+}
