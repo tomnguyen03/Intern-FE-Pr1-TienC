@@ -12,6 +12,10 @@
     font-size: 14px;
     color: $gray;
     font-weight: 500;
+
+    @include respond-to(phone-and-down) {
+      font-size: 12px;
+    }
   }
 
   .active {

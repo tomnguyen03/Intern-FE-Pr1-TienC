@@ -14,8 +14,7 @@
     }
 
     &__list {
-      @include flex(row, flex-start, space-between, wrap);
-      gap: 70px;
+      @include flex(row, flex-start, space-between, wrap, 70px);
 
       @include respond-to(tablet-and-down) {
         gap: 30px;

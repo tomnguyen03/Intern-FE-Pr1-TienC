@@ -12,3 +12,17 @@ mixin checkbox(data)
   .checkbox 
     input(type="checkbox")
     span= data
+
+mixin select(name,select,options)
+  .select-option
+    label.mr-2=name
+      |:
+    select
+      option(value="")=select
+      each item in options 
+        option(value=item)=item 
+
+mixin inputQuantity(number)
+  .input-quantity 
+    input(type="number" name="number" value=number)
+    button.btn.btn__primary Mua ngay

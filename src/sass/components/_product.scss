@@ -21,6 +21,19 @@
   }
 }
 
+.product-rate {
+  span {
+    color: $yellow;
+    font-size: 13px;
+  }
+
+  .reviews {
+    color: $gray;
+    margin-left: 5px;
+    font-style: italic;
+  }
+}
+
 .product-item {
   height: 320px;
   background-color: $white;
@@ -39,19 +52,6 @@
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
-  }
-
-  .product-rate {
-    span {
-      color: $yellow;
-      font-size: 13px;
-    }
-
-    .reviews {
-      color: $gray;
-      margin-left: 5px;
-      font-style: italic;
-    }
   }
 
   .product-button {

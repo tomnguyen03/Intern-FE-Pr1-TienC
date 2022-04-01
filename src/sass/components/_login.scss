@@ -21,8 +21,7 @@
 
 .login-left {
   form {
-    @include flex(column, flex-start, flex-start);
-    gap: 20px;
+    @include flex(column, flex-start, flex-start, $gap: 20px);
   }
 
   .login-link {
@@ -40,8 +39,7 @@
 }
 
 .login-right {
-  @include flex(column, flex-start, flex-start);
-  gap: 20px;
+  @include flex(column, flex-start, flex-start, $gap: 20px);
 
   p {
     font-size: 14px;
