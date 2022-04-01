@@ -1,10 +1,8 @@
 .filter-product {
-  @include flex(row, center, space-between, wrap);
-  gap: 20px;
+  @include flex(row, center, space-between, wrap, 20px);
 
   .filter-left {
-    @include flex(row, center, center, wrap);
-    gap: 20px;
+    @include flex(row, center, center, wrap, 20px);
 
     label {
       font-size: 14px;
@@ -27,8 +25,7 @@
   }
 
   .filter-right {
-    @include flex(row, center, center);
-    gap: 20px;
+    @include flex(row, center, center, $gap: 20px);
 
     i {
       font-size: 25px;

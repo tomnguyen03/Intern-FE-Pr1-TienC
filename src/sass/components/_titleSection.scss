@@ -6,8 +6,7 @@
   }
 
   .title-button {
-    @include flex(row, center, center);
-    gap: 5px;
+    @include flex(row, center, center, $gap: 5px);
 
     & > a {
       @include flex(row, center, center);

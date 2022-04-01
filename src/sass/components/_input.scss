@@ -1,6 +1,5 @@
 .input-group {
-  @include flex(column, flex-start, flex-start);
-  gap: 20px;
+  @include flex(column, flex-start, flex-start, $gap: 20px);
 
   label {
     font-size: 14px;
@@ -23,12 +22,31 @@
 }
 
 .checkbox {
-  @include flex(row, center, flex-start);
-  gap: 5px;
+  @include flex(row, center, flex-start, $gap: 5px);
 
   span {
     font-size: 14px;
     font-style: italic;
     color: $gray;
+  }
+}
+
+.input-quantity {
+  @include flex(row, center, flex-start, $gap: 20px);
+
+  input {
+    width: 80px;
+    height: 40px;
+    font-size: 14px;
+    border: 1px solid $line-gray;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  button {
+    border-radius: 0;
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: 600;
   }
 }
