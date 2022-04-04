@@ -5,6 +5,21 @@ prepend title
   - var title = "Trang chủ"
 block main
   main 
+    input#modal-one-close(type='radio' name='modal-one-radio' aria-hidden='true' hidden='')
+    input#modal-one-open(type='radio' name='modal-one-radio' aria-hidden='true' checked='')
+    .popup#modal-one
+      .popup-wrapper
+        .close-window
+          <label for="modal-one-close" class="btn btn__secondary">
+            i.bx.bx-x
+          </label>
+        h1 đăng kí nhận tin tức từ chúng tôi 
+        p Bạn muốn nhanh chóng nhận các tin tức khuyến mại và ưu đãi lớn của chúng tôi hàng tuần? Hãy đăng kí ngay theo form dưới đây
+        form(action="") 
+          +input("","email","email","Nhập email của bạn vào đây...")
+          button.btn.btn__primary(type="submit") Đăng kí
+        .popup-checkbox 
+          +checkbox("Không hiện lại thông báo này")
     .container 
       section.banner.pt-4
         .row 
