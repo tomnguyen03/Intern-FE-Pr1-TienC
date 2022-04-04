@@ -1,0 +1,70 @@
+.cart {
+  thead {
+    th {
+      text-transform: uppercase;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+  }
+
+  tbody {
+    td,
+    th {
+      text-align: center;
+      vertical-align: middle;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 50px 0;
+
+      input {
+        width: 40px;
+        height: 40px;
+        padding-left: 12px;
+        border: 1px solid $line-gray;
+        outline: none;
+        font-weight: 600;
+      }
+
+      i {
+        color: $red;
+        font-size: 25px;
+        font-weight: 700;
+      }
+    }
+
+    .table-image {
+      padding-left: 30px;
+    }
+  }
+}
+
+.checkout {
+  tr {
+    text-align: center;
+    text-transform: uppercase;
+
+    &:last-child {
+      td {
+        color: $red;
+      }
+    }
+  }
+
+  td {
+    vertical-align: middle;
+    font-weight: 600;
+  }
+
+  .checkout-action {
+    @include flex(row, flex-start, flex-end);
+    margin-top: 30px;
+
+    button {
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 0;
+      padding: 20px 30px;
+    }
+  }
+}
