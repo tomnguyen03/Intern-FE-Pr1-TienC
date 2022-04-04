@@ -1,0 +1,46 @@
+extend ../base/base.pug
+block variables
+  - const current="/"
+prepend title
+  - var title = "Thanh toán"
+block main
+  main 
+    .container.py-5
+      +breadcumb(["Trang chủ"], "Giỏ hàng")
+      section.cart.mt-5
+        table.table.table-bordered
+          thead 
+            tr 
+              each item in cartHeader 
+                th(scope='col')=item
+          tbody 
+            each item,index in cartList
+              tr 
+                th(scope='row')=index+1
+                td.table-image
+                  img(src=item.image, alt="")
+                td=item.name
+                td=`${item.price} Đ`
+                td
+                  input(type="text" value=item.quantity)
+                td=`${item.total} Đ`
+                td 
+                  i.bx.bx-x
+      section.checkout.row.justify-content-end.mt-4
+        .col-lg-6
+          table.table.table-bordered.table-checkout
+            tbody
+              tr
+                th Tổng tiền
+                td 6850000 Đ
+              tr
+                th(scope='row') Thuế (VAT)
+                td 685000 Đ
+              tr
+                th(scope='row') Thanh toán
+                td 7535000 Đ
+          .checkout-action
+            .continue
+              button.btn.btn__secondary tiếp tục mua hàng
+            .checkout-btn.ml-2
+              button.btn.btn__primary thanh toán
