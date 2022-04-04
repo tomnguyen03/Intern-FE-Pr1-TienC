@@ -1,0 +1,20 @@
+extend ../base/base.pug
+block variables
+  - const current="/"
+prepend title
+  - var title = "Tin tức"
+block main
+  main 
+    .container.py-5
+      +breadcumb(["Trang chủ"], "Tin tức")
+      .row
+        .col-lg-3
+            +sidebar(categories,"danh mục sản phẩm")
+            +sidebar(categoriesNews,"danh mục tin tức")
+            +librarySidebar(categoriesImages,"thư viện hình ảnh")
+            +tagSidebar(categoriesTag,"thẻ tags")
+        .col-lg-9
+          each item in newsData
+            +newsItem(item)
+          .mt-4 
+            +pagination(3,1)

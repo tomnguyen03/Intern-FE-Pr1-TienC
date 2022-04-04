@@ -43,7 +43,7 @@
         background-color: $black;
         color: $yellow;
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 600;
       }
     }
   }
@@ -60,6 +60,24 @@
 
     &:last-child {
       border-bottom: 1px solid $line-gray;
+    }
+  }
+
+  .image-list {
+    @include flex(row, center, center, wrap, 5px);
+  }
+
+  .tag-list {
+    @include flex(row, center, flex-start, wrap, 5px);
+  }
+
+  .image-item {
+    width: 75px;
+    height: 75px;
+
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 
