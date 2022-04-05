@@ -23,3 +23,24 @@ mixin productSidebar(products,title)
             .col-8
               h3=title
               span=price
+
+mixin librarySidebar(images,title)
+  nav.sidebar 
+    ul 
+      -if (title)
+        li.title
+          a(href="#")= title
+    .image-list
+      each item in images 
+        .image-item
+          img(src=item, alt="")
+
+mixin tagSidebar(categoriesTag,title)
+  nav.sidebar 
+    ul 
+      -if (title)
+        li.title
+          a(href="#")= title
+    .tag-list
+      each item in categoriesTag 
+        button.btn.btn__outline__secondary=item

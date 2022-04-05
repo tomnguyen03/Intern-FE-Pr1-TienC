@@ -1,0 +1,64 @@
+.news-item {
+  @include flex(column, flex-start, flex-start, nowrap, 15px);
+
+  .news-image img {
+    max-height: 350px;
+  }
+
+  .news-title a {
+    font-size: 16px;
+    line-height: 2;
+    color: $black;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  .news-link {
+    @include flex(row, center, flex-start, wrap, 20px);
+
+    .news-date span {
+      color: $gray;
+      font-size: 13px;
+      font-style: italic;
+    }
+
+    .news-author,
+    .news-comment {
+      @include flex(row, center, center, wrap, 5px);
+
+      i {
+        font-size: 15px;
+        color: $gray;
+      }
+
+      span {
+        font-size: 13px;
+        color: $gray;
+        font-style: italic;
+
+        a {
+          color: $yellow;
+          margin-left: 5px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .news-desc {
+    font-size: 13px;
+    color: $gray;
+    line-height: 1.5;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $line-gray;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $yellow;
+    }
+  }
+}

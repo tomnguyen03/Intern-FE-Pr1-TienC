@@ -2,6 +2,7 @@
   text-transform: uppercase;
   color: white;
   border: none;
+  border-radius: 0;
 
   &__primary {
     background-color: $yellow;
@@ -20,6 +21,24 @@
     &:hover {
       border: 1px solid $yellow;
       background-color: $yellow;
+      color: $white;
+      text-transform: none;
+    }
+  }
+
+  &__outline__secondary {
+    border: 1px solid $gray;
+    background-color: transparent;
+    transition: $transition;
+    color: $gray;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-style: italic;
+    text-transform: lowercase;
+
+    &:hover {
+      border: 1px solid $black;
+      background-color: $black;
       color: $white;
       text-transform: none;
     }

@@ -1,0 +1,19 @@
+mixin newsItem({image,title,date,author,comment,desc})
+  .news-item 
+    .news-image 
+      img(src=image, alt=title)
+    .news-title 
+      a(href="")=title 
+    .news-link 
+      .news-date 
+        span=date
+      .news-author 
+        i.bx.bxs-user
+        span Đăng bởi
+          a(href="#")=author 
+      .news-comment 
+        i.bx.bxs-message-rounded-dots
+        span=`${comment} bình luận`
+    .news-desc 
+      p=desc 
+        a(href="#") [Đọc tiếp]
