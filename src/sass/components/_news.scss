@@ -61,4 +61,132 @@
       color: $yellow;
     }
   }
+
+  .news-detail {
+    @include flex(column, center, center, wrap, 20px);
+  }
+
+  .news-other {
+    @include flex(row, center, space-between, wrap);
+    width: 100%;
+
+    h6 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+
+    .news-tag,
+    .news-share {
+      @include flex(row, center, center, wrap, 5px);
+    }
+
+    .news-tag {
+      a {
+        font-size: 12px;
+        color: $gray;
+        font-style: italic;
+        font-weight: 400;
+
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+
+    .news-share {
+      a {
+        @include flex(row, center, center, wrap);
+        width: 30px;
+        height: 30px;
+        border: 1px solid $line-gray;
+        background-color: $white;
+        color: $gray;
+
+        &:hover {
+          color: $white;
+          background-color: $yellow;
+          border-color: $yellow;
+        }
+
+        i {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .news-detail-comment {
+    @include flex(column, flex-start, flex-start, wrap, 40px);
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $line-gray;
+
+    h6 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.comment-item {
+  @include flex(row, flex-start, flex-start, nowrap, 15px);
+
+  &:nth-child(2n + 1) {
+    margin-left: 100px;
+
+    @include respond-to(tablet-and-down) {
+      margin-left: 0;
+    }
+  }
+
+  .comment-avatar {
+    padding: 4px;
+    border: 1px solid $line-gray;
+
+    img {
+      width: 135px;
+    }
+  }
+
+  .comment-content {
+    @include flex(column, flex-start, flex-start, wrap, 8px);
+
+    p {
+      color: $gray;
+      font-size: 13px;
+      font-style: italic;
+      line-height: 1.5;
+    }
+  }
+
+  .comment-date {
+    @include flex(row, center, space-between, wrap);
+    width: 100%;
+
+    p,
+    a {
+      color: $gray;
+      font-size: 13px;
+      font-style: italic;
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $yellow;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+  }
+}
+
+.write-comment {
+  .btn__primary {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 20px;
+  }
 }

@@ -43,4 +43,4 @@ mixin tagSidebar(categoriesTag,title)
           a(href="#")= title
     .tag-list
       each item in categoriesTag 
-        button.btn.btn__outline__secondary=item
+        a.btn.btn__outline__secondary(href="#")=item

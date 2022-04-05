@@ -17,3 +17,65 @@ mixin newsItem({image,title,date,author,comment,desc})
     .news-desc 
       p=desc 
         a(href="#") [Đọc tiếp]
+
+mixin commentItem({avatar,name,date,comment})
+  .comment-item 
+    .comment-avatar 
+      img(src=avatar, alt=name)
+    .comment-content 
+      h6=name 
+      .comment-date 
+        p=date 
+        a(href="#") Trả lời 
+      p=comment
+
+mixin newsItemDetail({image,title,date,author,comment,desc})
+  .news-item 
+    .news-image 
+      img(src=image, alt=title)
+    .news-title 
+      a(href="")=title 
+    .news-link 
+      .news-date 
+        span=date
+      .news-author 
+        i.bx.bxs-user
+        span Đăng bởi
+          a(href="#")=author 
+      .news-comment 
+        i.bx.bxs-message-rounded-dots
+        span=`${comment} bình luận`
+    .news-desc.news-detail 
+      p=desc 
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eaque earum laboriosam, magnam nulla labore cupiditate laborum illum commodi architecto iusto ab aspernatur ullam, accusamus ipsa explicabo dolor nobis tempore!
+      img(src="./assets/images/news/news2.png", alt=title)
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos vero recusandae repellendus suscipit, ipsa est error numquam? Tempora excepturi odio tempore dolores officiis nesciunt eos omnis, enim tenetur soluta eligendi.
+      p=desc
+      img(src="./assets/images/news/news3.png", alt=title)
+      p=desc
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, dolores architecto inventore omnis ea ab mollitia porro natus consequuntur reiciendis quidem maxime quia possimus laborum, reprehenderit eius repellendus quis quaerat.
+      .news-other.mt-4
+        .news-tag
+          h6 tags:
+          each item in categoriesTag
+            a(href="#")=`${item},`
+        .news-share 
+          h6 chia sẻ:
+          each item in socials
+            a(href="#")
+              i(class=item.icon)
+    .news-detail-comment 
+      h6 Bình luận
+      each item in comments 
+        +commentItem(item)
+    .write-comment.w-100
+      form(action="") 
+        .row
+          -for(var i = 0; i < 2; i++)
+            -const {title,name,type,placeholder,required} = profile[i];
+            .col-lg-6.mt-4
+              +input(title,name,type,placeholder,required)
+          .col-12.mt-4 
+            +textArea("Bình luận",false)
+          .col-12.mt-4
+            a.btn.btn__primary(href="#") Gửi bình luận
