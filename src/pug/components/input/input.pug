@@ -26,3 +26,9 @@ mixin inputQuantity(number)
   .input-quantity 
     input(type="number" name="number" value=number)
     button.btn.btn__primary Mua ngay
+
+mixin textArea(data,name,isRequired=false)
+  .input-group 
+    label(class=`${isRequired ? "require" : ""}`)= data
+      |:
+    textarea(name=name, cols="30", rows="10")
