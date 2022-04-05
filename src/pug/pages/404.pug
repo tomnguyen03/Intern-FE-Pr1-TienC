@@ -1,0 +1,15 @@
+extend ../base/base.pug
+block variables
+  - const current="/"
+prepend title
+  - var title = "404"
+block main
+  main 
+    .container.py-5
+      .row.page-404
+        .col-lg-7.content-404
+          h1 404 error 
+          p Chúng tôi không tìm thấy kết quả nào phù hợp với tìm kiếm của bạn ! Xin vui lòng trở về trang chủ
+          a.btn.btn__secondary(href="#") trang chủ
+        .col-lg-5.image-404
+          img(src="./assets/images/404.png", alt="404")

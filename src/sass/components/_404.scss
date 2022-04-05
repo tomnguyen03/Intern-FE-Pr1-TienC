@@ -1,0 +1,38 @@
+.page-404 {
+  .content-404 {
+    @include flex(column, center, center, wrap);
+
+    h1 {
+      font-size: clamp(80px, 2vw, 100px);
+      font-weight: 700;
+      color: $yellow;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    a {
+      padding: 15px 30px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    @include respond-to(tablet-and-down) {
+      align-items: flex-start;
+
+      h1 {
+        font-size: 80px;
+      }
+    }
+  }
+
+  .image-404 {
+    @include respond-to(tablet-and-down) {
+      display: none;
+    }
+  }
+}
