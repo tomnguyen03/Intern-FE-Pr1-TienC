@@ -1,6 +1,6 @@
 extend ../base/base.pug
 block variables
-  - const current="/"
+  - const current="/list-page.html"
 prepend title
   - var title = "Danh mục sản phẩm"
 block main
@@ -8,17 +8,10 @@ block main
     .container.py-5
       +breadcumb(["Trang chủ"], "Danh mục sản phẩm")
       .row
-        .col-lg-3
-            +sidebar(categories,"danh mục sản phẩm")
-            +sidebar(categoriesPrice,"tìm theo mức giá")
-            +sidebar(categoriesColor,"tìm theo màu sắc")
-            +productSidebar(products,"sản phẩm khuyến mãi")
+        .col-lg-3#sidebar-product
         .col-lg-9
           +filterProduct()
           .tab-content.mt-4
             #list.tab-pane.fade.in.active.show
-              +product-list-page(products,9)
             #grid.tab-pane.fade
-              +products(products,18,'all')
-          .mt-4 
-            +pagination(3,1)
+          .mt-4#pagination

@@ -1,0 +1,277 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Máy khoan black decker",
+      "image": "./assets/images/product/product1.png",
+      "rate": 3,
+      "reviews": 12,
+      "price": "1.150.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 2,
+      "title": "Máy khoan white decker",
+      "image": "./assets/images/product/product2.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.250.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 3,
+      "title": "Máy khoan yellow decker",
+      "image": "./assets/images/product/product3.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.350.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 4,
+      "title": "Máy khoan cyan decker",
+      "image": "./assets/images/product/product4.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.450.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 5,
+      "title": "Máy khoan abc decker",
+      "image": "./assets/images/product/product5.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.550.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 6,
+      "title": "Máy khoan efg decker",
+      "image": "./assets/images/product/product6.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.650.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 7,
+      "title": "Máy khoan omg decker",
+      "image": "./assets/images/product/product6.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.750.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 8,
+      "title": "Máy khoan zzz decker",
+      "image": "./assets/images/product/product6.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.850.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 9,
+      "title": "Máy khoan voz decker",
+      "image": "./assets/images/product/product6.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.950.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 10,
+      "title": "Máy khoan black decker",
+      "image": "./assets/images/product/product1.png",
+      "rate": 3,
+      "reviews": 12,
+      "price": "1.150.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 11,
+      "title": "Máy khoan white decker",
+      "image": "./assets/images/product/product2.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.250.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 12,
+      "title": "Máy khoan yellow decker",
+      "image": "./assets/images/product/product3.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.350.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 13,
+      "title": "Máy khoan cyan decker",
+      "image": "./assets/images/product/product4.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.450.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 14,
+      "title": "Máy khoan abc decker",
+      "image": "./assets/images/product/product6.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.550.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 15,
+      "title": "Máy khoan efg decker",
+      "image": "./assets/images/product/product2.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.650.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 16,
+      "title": "Máy khoan omg decker",
+      "image": "./assets/images/product/product1.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.750.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 17,
+      "title": "Máy khoan zzz decker",
+      "image": "./assets/images/product/product5.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.850.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 18,
+      "title": "Máy khoan ajsdsajd decker",
+      "image": "./assets/images/product/product3.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.950.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 19,
+      "title": "Máy khoan black decker",
+      "image": "./assets/images/product/product1.png",
+      "rate": 3,
+      "reviews": 12,
+      "price": "1.150.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 20,
+      "title": "Máy khoan white decker",
+      "image": "./assets/images/product/product2.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.250.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 21,
+      "title": "Máy khoan yellow decker",
+      "image": "./assets/images/product/product3.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.350.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 22,
+      "title": "Máy khoan cyan decker",
+      "image": "./assets/images/product/product4.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.450.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 23,
+      "title": "Máy khoan abc decker",
+      "image": "./assets/images/product/product5.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.550.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 24,
+      "title": "Máy khoan efg decker",
+      "image": "./assets/images/product/product4.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.650.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 25,
+      "title": "Máy khoan omg decker",
+      "image": "./assets/images/product/product3.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.750.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 26,
+      "title": "Máy khoan zzz decker",
+      "image": "./assets/images/product/product2.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.850.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 27,
+      "title": "Máy khoan jasdjsadj decker",
+      "image": "./assets/images/product/product1.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": "1.950.000",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    }
+  ],
+
+  "categories": [
+    "Máy khoan, cắt CNC",
+    "Máy in phun khổ lớn",
+    "Máy quét Canon 3D",
+    "Máy hàn điện Alunima",
+    "Máy khoan Decameta",
+    "Máy phay đa năng CNC",
+    "Máy mài, tiện DC 12V",
+    "Máy khoan, cắt CNC",
+    "Máy quay thông minh N3",
+    "Motor R34C đa dụng",
+    "Máy in laser màu 3D"
+  ],
+
+  "categoriesPrice": [
+    "0 - 200.000 Đ",
+    "200.000 Đ - 500.000 Đ",
+    "500.000 Đ - 1.000.000 Đ",
+    "1.000.000 Đ - 2.000.000 Đ",
+    "Trên 2.000.000 Đ"
+  ],
+
+  "categoriesColor": [
+    "Màu đỏ",
+    "Màu vàng",
+    "Màu xanh",
+    "Màu bạc",
+    "Màu đen"
+  ]
+}

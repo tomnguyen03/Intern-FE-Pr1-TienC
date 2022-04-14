@@ -17,7 +17,7 @@ mixin product(product)
       +rating(product)
       .product-button
         a(href="#").btn.btn__primary mua ngay
-        a(href="#").btn.btn__secondary xem chi tiết
+        a(href="/product-detail.html").btn.btn__secondary xem chi tiết
 
 mixin bigProduct(product)
   .product-item.w-100.height-big
@@ -32,7 +32,7 @@ mixin bigProduct(product)
           | đ
         .product-button
           a(href="#").btn.btn__primary mua ngay
-          a(href="#").btn.btn__secondary xem chi tiết
+          a(href="//product-detail.html").btn.btn__secondary xem chi tiết
 
 mixin product-item-list-page(product)
   .product-item.w-100.height-big
@@ -47,7 +47,7 @@ mixin product-item-list-page(product)
           | đ
         .product-button
           a(href="#").btn.btn__primary mua ngay
-          a(href="#").btn.btn__secondary xem chi tiết
+          a(href="/product-detail.html").btn.btn__secondary xem chi tiết
 
 mixin large-product(products)
   .product-list.large-product
@@ -68,7 +68,7 @@ mixin large-product(products)
             +product(products[i])
 
 mixin products (products, size, type)
-  .product-list#grid
+  .product-list
     - for(var i = 0; i < size; i++)
       div(class=`col-lg-4 col-sm-6 pr-0 ${type=='all' ? "" : "product-col"}`)
         .product-list__item.mb-4
@@ -82,7 +82,7 @@ mixin bigProducts (products, size)
           +bigProduct(products[i])
 
 mixin product-list-page(products,size)
-  .product-list#list
+  .product-list
     -for(var i = 0; i < size; i++)
       .col-12.px-0
         .product-list__item.mb-4

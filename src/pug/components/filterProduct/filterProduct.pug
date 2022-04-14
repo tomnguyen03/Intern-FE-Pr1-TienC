@@ -9,7 +9,7 @@ mixin filterProduct(type)
           option(value="review") Đánh giá
       .filter-show
         label Show:
-        select(name="show")
+        select(name="show" id="show" onchange="filterShow(event)")
           option(value="9") 9
           option(value="18") 18
     .filter-right
