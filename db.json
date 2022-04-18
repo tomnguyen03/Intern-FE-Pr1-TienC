@@ -6,7 +6,7 @@
       "image": "./assets/images/product/product1.png",
       "rate": 3,
       "reviews": 12,
-      "price": "1.150.000",
+      "price": 1150000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -15,7 +15,7 @@
       "image": "./assets/images/product/product2.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.250.000",
+      "price": 1250000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -24,7 +24,7 @@
       "image": "./assets/images/product/product3.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.350.000",
+      "price": 1350000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -33,7 +33,7 @@
       "image": "./assets/images/product/product4.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.450.000",
+      "price": 1450000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -42,7 +42,7 @@
       "image": "./assets/images/product/product5.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.550.000",
+      "price": 1550000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -51,7 +51,7 @@
       "image": "./assets/images/product/product6.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.650.000",
+      "price": 1650000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -60,7 +60,7 @@
       "image": "./assets/images/product/product6.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.750.000",
+      "price": 1750000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -69,7 +69,7 @@
       "image": "./assets/images/product/product6.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.850.000",
+      "price": 1850000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -78,7 +78,7 @@
       "image": "./assets/images/product/product6.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.950.000",
+      "price": 1950000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -87,7 +87,7 @@
       "image": "./assets/images/product/product1.png",
       "rate": 3,
       "reviews": 12,
-      "price": "1.150.000",
+      "price": 1150000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -96,7 +96,7 @@
       "image": "./assets/images/product/product2.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.250.000",
+      "price": 1250000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -105,7 +105,7 @@
       "image": "./assets/images/product/product3.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.350.000",
+      "price": 1350000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -114,7 +114,7 @@
       "image": "./assets/images/product/product4.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.450.000",
+      "price": 1450000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -123,7 +123,7 @@
       "image": "./assets/images/product/product6.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.550.000",
+      "price": 1550000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -132,7 +132,7 @@
       "image": "./assets/images/product/product2.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.650.000",
+      "price": 1650000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -141,7 +141,7 @@
       "image": "./assets/images/product/product1.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.750.000",
+      "price": 1750000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -150,7 +150,7 @@
       "image": "./assets/images/product/product5.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.850.000",
+      "price": 1850000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -159,7 +159,7 @@
       "image": "./assets/images/product/product3.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.950.000",
+      "price": 1950000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -168,7 +168,7 @@
       "image": "./assets/images/product/product1.png",
       "rate": 3,
       "reviews": 12,
-      "price": "1.150.000",
+      "price": 1150000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -177,7 +177,7 @@
       "image": "./assets/images/product/product2.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.250.000",
+      "price": 1250000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -186,7 +186,7 @@
       "image": "./assets/images/product/product3.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.350.000",
+      "price": 1350000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -194,8 +194,8 @@
       "title": "Máy khoan cyan decker",
       "image": "./assets/images/product/product4.png",
       "rate": 4,
-      "reviews": 12,
-      "price": "1.450.000",
+      "reviews": 11,
+      "price": 1450000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -203,8 +203,8 @@
       "title": "Máy khoan abc decker",
       "image": "./assets/images/product/product5.png",
       "rate": 4,
-      "reviews": 12,
-      "price": "1.550.000",
+      "reviews": 10,
+      "price": 1550000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -212,8 +212,8 @@
       "title": "Máy khoan efg decker",
       "image": "./assets/images/product/product4.png",
       "rate": 4,
-      "reviews": 12,
-      "price": "1.650.000",
+      "reviews": 5,
+      "price": 1650000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -222,7 +222,7 @@
       "image": "./assets/images/product/product3.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.750.000",
+      "price": 1750000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -231,7 +231,7 @@
       "image": "./assets/images/product/product2.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.850.000",
+      "price": 1850000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     },
     {
@@ -240,7 +240,16 @@
       "image": "./assets/images/product/product1.png",
       "rate": 4,
       "reviews": 12,
-      "price": "1.950.000",
+      "price": 1950000,
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
+    },
+    {
+      "id": 28,
+      "title": "Máy khoan jasdjsadj decker",
+      "image": "./assets/images/product/product1.png",
+      "rate": 4,
+      "reviews": 12,
+      "price": 1950000,
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore commo..."
     }
   ],

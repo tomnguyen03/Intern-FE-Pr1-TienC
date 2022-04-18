@@ -59,6 +59,7 @@
     margin-top: 10px;
     gap: 10px;
 
+    button,
     a {
       @include flex(row, center, center);
       border-radius: 0;

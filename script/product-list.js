@@ -1,18 +1,24 @@
 const sidebar = document.querySelector("#sidebar-product");
 const listpage = document.querySelector("#list");
 const gridpage = document.querySelector("#grid");
-const show = document.querySelector("#show");
+const showItem = document.querySelector("#show");
 const paginationE1 = document.querySelector("#pagination");
+const sortFilter = document.querySelector("#sortFilter");
+const cartCount = document.querySelector(
+  ".header__menu-right__card-count"
+);
 
 let products = [];
 let countProduct = 0;
 let categories = [];
 let categoriesPrice = [];
 let categoriesColor = [];
-let limit = 9;
-let page = 1;
+var limit = 9;
+var page = 1;
+var sort = "name";
 let currentPage = 1;
-
+let buttonDOM = [];
+let cart = [];
 class Storage {
   static saveCart(cart) {
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -26,17 +32,20 @@ class Storage {
 }
 
 class Model {
-  getProduct = async function (page = 1, limit = 9) {
+  getProduct = async function (page = 1, limit = 9, sort = "title") {
+    this.getLimit();
+    this.sorting();
     try {
       const res = await axios.get("http://localhost:3000/products", {
         params: {
           _page: page,
           _limit: limit,
+          _sort: sort,
         },
       });
       const data = await res.data;
-      products = data;
       countProduct = res.headers["x-total-count"];
+      products = data;
       return products;
     } catch (error) {
       console.log(error);
@@ -79,11 +88,38 @@ class Model {
       console.log(error);
     }
   };
+
+  getLimit = function () {
+    showItem.addEventListener("change", (e) => {
+      const view = new View();
+      const viewCart = new ViewCart();
+
+      limit = e.target.value;
+      view.pagination(countProduct, (limit = limit));
+      this.getProduct(page, (limit = limit)).then((products) => {
+        view.renderProductListPage(products);
+        view.renderProductGridPage(products);
+        viewCart.addToCart();
+      });
+    });
+  };
+
+  sorting = function () {
+    sortFilter.addEventListener("change", (e) => {
+      const view = new View();
+      const viewCart = new ViewCart();
+
+      sort = e.target.value;
+      this.getProduct(page, limit, (sort = sort)).then((products) => {
+        view.renderProductListPage(products);
+        view.renderProductGridPage(products);
+        viewCart.addToCart();
+      });
+    });
+  };
 }
 
 class View {
-  initialApp() {}
-
   renderSidebar(categories, title) {
     let htmls = `
       <nav class="sidebar">
@@ -151,8 +187,16 @@ class View {
             <h3 class="product-title">${product.title}</h3>
             <div class="product-rate">${this.rating(product)}</div>
             <p class="product-desc">${product.desc}</p>
-            <p class="product-price">${product.price}</p>
-            <div class="product-button"><a class="btn btn__primary" href="#">mua ngay</a><a class="btn btn__secondary" href="/product-detail.html">xem chi tiết</a></div>
+            <p class="product-price">${product.price
+              .toString()
+              .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")} đ</p>
+            <div class="product-button"><button class="btn btn__primary bag-button" data-id=${
+              product.id
+            } data-img=${product.image} data-title=${product.title
+      .split(" ")
+      .join(",")} data-price=${
+      product.price
+    } href="#">mua ngay</button><a class="btn btn__secondary" href="/product-detail.html">xem chi tiết</a></div>
           </div>
         </div>
       </div>
@@ -186,10 +230,18 @@ class View {
         <div class="product-img"> <img src=${product.image} alt=${
       product.title
     }/></div>
-        <p class="product-price">${product.price}đ</p>
+        <p class="product-price">${product.price
+          .toString()
+          .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")} đ</p>
         <h3 class="product-title">${product.title}</h3>
         <div class="product-rate">${this.rating(product)}</div>
-        <div class="product-button"><a class="btn btn__primary" href="#">mua ngay</a><a class="btn btn__secondary" href="/product-detail.html">xem chi tiết</a></div>
+        <div class="product-button"><button class="btn btn__primary bag-button" data-id=${
+          product.id
+        } data-img=${product.image} data-title=${product.title
+      .split(" ")
+      .join(",")} data-price=${
+      product.price
+    } href="#">mua ngay</button><a class="btn btn__secondary" href="/product-detail.html">xem chi tiết</a></div>
       </div>
     </div>
     `;
@@ -262,7 +314,6 @@ class View {
             ? (btn.className += " active")
             : "button-item";
         });
-
         model
           .getProduct((page = currentPage), (limit = limit))
           .then((products) => {
@@ -274,9 +325,57 @@ class View {
   };
 }
 
+class ViewCart {
+  initialApp() {
+    cart = Storage.getCart();
+    this.renderCartQuantity();
+  }
+
+  renderCartQuantity() {
+    let total = cart.reduce((total, item) => total + item.amount, 0);
+    cartCount.textContent = total;
+  }
+
+  addToCart() {
+    const bagButton = [...document.querySelectorAll(".bag-button")];
+    buttonDOM = bagButton;
+    bagButton.forEach((button) => {
+      const productId = button.dataset.id;
+      const productTitle = button.dataset.title;
+      const price = button.dataset.price;
+      const productImg = button.dataset.img;
+      button.addEventListener("click", (e) => {
+        const title = productTitle.split(",").join(" ");
+        const inCart = Storage.getCart().find(
+          (item) => item.id === productId
+        );
+        if (inCart) {
+          let tempItem = cart.find((item) => item.id === productId);
+          tempItem.amount += 1;
+          Storage.saveCart(cart);
+        } else {
+          const cartItem = {
+            id: productId,
+            title: title,
+            price: price,
+            image: productImg,
+            amount: 1,
+          };
+          cart = [...cart, cartItem];
+          Storage.saveCart(cart);
+        }
+        this.renderCartQuantity();
+      });
+    });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const model = new Model();
   const view = new View();
+  const viewCart = new ViewCart();
+
+  viewCart.initialApp();
 
   model
     .getProduct()
@@ -284,7 +383,10 @@ document.addEventListener("DOMContentLoaded", () => {
       view.renderProductListPage(products);
       view.renderProductGridPage(products);
     })
-    .then(() => view.pagination(countProduct, limit));
+    .then(() => {
+      viewCart.addToCart();
+      view.pagination(countProduct, limit);
+    });
   model
     .getCategories()
     .then((categories) =>

@@ -3,13 +3,13 @@ mixin filterProduct(type)
     .filter-left
       .filter-sort
         label Sắp xếp theo:
-        select(name="sort")
-          option(value="name") Tên sản phẩm
+        select(name="sort" id="sortFilter")
+          option(value="title") Tên sản phẩm
           option(value="price") Giá sản phẩm
-          option(value="review") Đánh giá
+          option(value="reviews") Đánh giá
       .filter-show
         label Show:
-        select(name="show" id="show" onchange="filterShow(event)")
+        select(name="show" id="show")
           option(value="9") 9
           option(value="18") 18
     .filter-right

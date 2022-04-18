@@ -13,34 +13,24 @@ block main
             tr 
               each item in cartHeader 
                 th(scope='col')=item
-          tbody 
-            each item,index in cartList
-              tr 
-                th(scope='row')=index+1
-                td.table-image
-                  img(src=item.image, alt="")
-                td=item.name
-                td=`${item.price} Đ`
-                td
-                  input(type="text" value=item.quantity)
-                td=`${item.total} Đ`
-                td 
-                  i.bx.bx-x
+          tbody.cartList
+           
       section.checkout.row.justify-content-end.mt-4
         .col-lg-6
           table.table.table-bordered.table-checkout
             tbody
               tr
                 th Tổng tiền
-                td 6850000 Đ
+                td.cartTotalMoney 
               tr
                 th(scope='row') Thuế (VAT)
-                td 685000 Đ
+                td.cartVAT
               tr
                 th(scope='row') Thanh toán
-                td 7535000 Đ
+                td.cartTotal
           .checkout-action
             .continue
               button.btn.btn__secondary tiếp tục mua hàng
             .checkout-btn.ml-2
-              button.btn.btn__primary thanh toán
+              button.btn.btn__primary.cartPayment thanh toán
+  script(src='../script/cart.js')
