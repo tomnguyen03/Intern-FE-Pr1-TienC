@@ -60,11 +60,16 @@
     @include flex(row, flex-start, flex-end);
     margin-top: 30px;
 
-    button {
+    a {
+      color: $white;
       font-size: 14px;
       font-weight: 600;
       border-radius: 0;
       padding: 20px 30px;
+
+      &:hover {
+        color: $white;
+      }
     }
   }
 }

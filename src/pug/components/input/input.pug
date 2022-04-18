@@ -3,10 +3,10 @@ mixin input(data,name,type="text",placeholder="",isRequired=false)
     .input-group 
       label(class=`${isRequired ? "require" : ""}`)= data
         |:
-      input(type=type, placeholder=placeholder name=name)
+      input(type=type, placeholder=placeholder name=name class=name)
   -else
     .input-group
-      input(type=type, placeholder=placeholder name=name)
+      input(type=type, placeholder=placeholder name=name class=name)
 
 mixin checkbox(data)
   .checkbox 

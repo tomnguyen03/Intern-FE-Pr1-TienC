@@ -1,0 +1,81 @@
+extend ../base/base.pug
+block variables
+  - const current="/"
+prepend title
+  - var title = "Thanh toán"
+block main
+  main 
+    .container.py-5
+      +breadcumb(["Trang chủ","Giỏ hàng"], "Thanh toán")
+      .progress-bar 
+        each item,index in progressBarData
+          .step
+            .step-number=item.number
+            .step-name=item.name
+        .progress-line
+      .tab-checkout 
+        .tab-checkout-item 
+          section.cart.mt-5
+            table.table.table-bordered
+              thead 
+                tr 
+                  each item in cartCheckout 
+                    th(scope='col')=item
+              tbody.cartList    
+          section.checkout.row.justify-content-end.mt-4
+            .col-lg-6
+              table.table.table-bordered.table-checkout
+                tbody
+                  tr
+                    th Tổng tiền
+                    td.cartTotalMoney 
+                  tr
+                    th(scope='row') Thuế (VAT)
+                    td.cartVAT
+                  tr
+                    th(scope='row') Thanh toán
+                    td.cartTotal
+              .ml-2
+                button.btn.btn__primary.button-checkout#button-step1(data-id=1) xác nhận
+        .tab-checkout-item 
+          h2 Nhập thông tin cá nhân 
+          .form-input-checkout
+            .row 
+              each item,index in inputProfileData
+                .col-lg-6
+                  -const {title,name,type,placeholder,required} = item
+                  +input(title,name,type,placeholder,required)
+                  span.noti-validate
+            .ml-2
+              button.btn.btn__primary.button-checkout#button-step2(data-id=2) xác nhận
+        .tab-checkout-item
+          h2 Thông tin cá nhân 
+          .row.confirm-profile
+          h2 Đơn hàng
+          .confirm-order
+            section.cart.mt-5
+              table.table.table-bordered
+                thead 
+                  tr 
+                    each item in cartCheckout 
+                      th(scope='col')=item
+                tbody.cartList.cart-confirm 
+            section.checkout.row.justify-content-end.mt-4
+              .col-lg-6
+                table.table.table-bordered.table-checkout
+                  tbody
+                    tr
+                      th Tổng tiền
+                      td.cartTotalMoney.step3-cartTotalMoney
+                    tr
+                      th(scope='row') Thuế (VAT)
+                      td.cartVAT.step3-cartVAT
+                    tr
+                      th(scope='row') Thanh toán
+                      td.cartTotal.step3-cartTotal
+                .ml-2
+                  button.btn.btn__primary.button-checkout#button-step3(data-id=3) xác nhận
+        .tab-checkout-item
+          h1 Cảm ơn bạn đã mua hàng của chúng tôi.
+  script(src='../script/cart.js')
+  script(src='../script/checkout.js')

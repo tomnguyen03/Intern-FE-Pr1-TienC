@@ -23,6 +23,10 @@ class Storage {
       ? JSON.parse(localStorage.getItem("cart"))
       : [];
   }
+
+  static saveProfile(profile) {
+    localStorage.setItem("profile", JSON.stringify(profile));
+  }
 }
 
 class View {

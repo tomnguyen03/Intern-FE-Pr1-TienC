@@ -1,0 +1,94 @@
+.progress-bar {
+  @include flex(row, center, center, wrap, 50px);
+  background-color: $white;
+  color: $black;
+  position: relative;
+
+  .step {
+    @include flex(column, center, center, wrap, 10px);
+    position: relative;
+    z-index: $z-elevate;
+
+    .step-number {
+      @include flex(row, center, center);
+      background-color: #cacaca;
+      color: #eef8ff;
+      font-size: 14px;
+      font-weight: 600;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    .step-name {
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .active {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  .progress-line {
+    height: 1px;
+    width: 420px;
+    text-align: center;
+    background-color: #cccccc;
+    position: absolute;
+    top: 15px;
+    z-index: 0;
+  }
+}
+
+//Step 2
+.tab-checkout-item {
+  margin-top: 30px;
+
+  h1,
+  h2,
+  h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 80px;
+    display: block;
+  }
+
+  .form-input-checkout {
+    .col-lg-6 {
+      margin-bottom: 30px;
+    }
+  }
+
+  .noti-validate {
+    font-size: 12px;
+    color: $red;
+    font-style: italic;
+    margin-top: 5px;
+    display: inline-block;
+  }
+}
+
+.button-checkout {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px 25px;
+}
+
+//Step 3
+.confirm-profile {
+  margin: 40px 0;
+
+  p {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
